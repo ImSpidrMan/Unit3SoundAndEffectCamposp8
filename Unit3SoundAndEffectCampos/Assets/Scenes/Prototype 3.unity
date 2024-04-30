@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 170076734}
-  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657844, g: 0.49641222, b: 0.57481676, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -368,13 +368,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 534669902}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.021278502, y: 0.05127571, z: -0.001863849, w: 0.9984561}
+  m_LocalRotation: {x: 0.021354612, y: -0.013636364, z: -0.000478856, w: 0.9996789}
   m_LocalPosition: {x: 9.14, y: 4.05, z: -11.41}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 2.446, y: 5.878, z: -0.088}
+  m_LocalEulerAnglesHint: {x: 2.446, y: -1.565, z: -0.088}
 --- !u!82 &534669906
 AudioSource:
   m_ObjectHideFlags: 0
@@ -901,7 +901,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 541dae7af2b1346098551a00db75834b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  obstaclePrefab: {fileID: 279665813788845380, guid: f0e70832626844c1486898effd4e985d, type: 3}
+  obstaclePrefab:
+  - {fileID: 151586, guid: 95927758d3a4cef4ba6c4318f06876fd, type: 3}
+  - {fileID: 279665813788845380, guid: f0e70832626844c1486898effd4e985d, type: 3}
+  - {fileID: 181666, guid: ee7d0c4ddd804dd4e95f705d43c9135e, type: 3}
+  - {fileID: 1609270425926636, guid: 9020d2933ec6c0544965ea4b12952c42, type: 3}
 --- !u!4 &1710953099
 Transform:
   m_ObjectHideFlags: 0
