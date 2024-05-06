@@ -15,23 +15,26 @@ public class PlayerController : MonoBehaviour
     public float gravityModifier;
     public bool isOnGround = true;
     public bool gameOver;
+    [SerializeField] int jumpTimes;
+    private int jumpCurrentTimes;
 
     // Start is called before the first frame update
     void Start()
     {
         playerRb = GetComponent<Rigidbody>();
         playerAnim = GetComponent<Animator>();
-        playerAudio = GetComponent<AudioSource>();  
+        playerAudio = GetComponent<AudioSource>();
+        jumpCurrentTimes = jumpTimes;
         Physics.gravity *= gravityModifier;
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space) && isOnGround && !gameOver)
+        if (Input.GetKeyDown(KeyCode.Space) && (jumpCurrentTimes > 0) && !gameOver)
         {
             playerRb.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
-            isOnGround = false;
+            jumpCurrentTimes--;
             playerAnim.SetTrigger("Jump_trig");
             dirtParticle.Stop();
             playerAudio.PlayOneShot(jumpSound, 1.0f);
@@ -43,6 +46,7 @@ public class PlayerController : MonoBehaviour
     {
         if(collision.gameObject.CompareTag("Ground"))
         {
+            jumpCurrentTimes = jumpTimes;
             isOnGround = true;
             dirtParticle.Play();
         }

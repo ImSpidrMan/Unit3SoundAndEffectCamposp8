@@ -723,6 +723,7 @@ MonoBehaviour:
   gravityModifier: 1.5
   isOnGround: 1
   gameOver: 0
+  jumpTimes: 2
 --- !u!65 &1444408858
 BoxCollider:
   m_ObjectHideFlags: 0
